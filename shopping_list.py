@@ -25,7 +25,12 @@ def shopping_list():
             if len(shoppinglist) == 0:
                 print("The list is empty")
             else:
-                print(f"{shoppinglist}")
+                if shoppinglist:
+                    print("Your shopping list: ")
+                    index = 1
+                    for item in shoppinglist:
+                        print(f"{index}. {item}")
+                        index += 1
         else:
             print("You can't do that.")
             
